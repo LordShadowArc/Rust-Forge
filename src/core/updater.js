@@ -7,7 +7,7 @@ const { app } = require('electron');
 function parseRepoSlug(pkg) {
   const url = String(pkg?.repository?.url || '').replace(/^git\+/, '').replace(/\.git$/, '');
   const m = url.match(/github\.com[/:]([^/]+)\/([^/]+)$/i);
-  if (m && m[1] !== 'OWNER' && m[2] !== 'Rust-Forge') return `${m[1]}/${m[2]}`;
+  if (m && m[1] !== 'OWNER' && m[2] !== 'REPO') return `${m[1]}/${m[2]}`;
   return String(process.env.RUST_FORGE_GITHUB_REPO || '').trim() || null;
 }
 
