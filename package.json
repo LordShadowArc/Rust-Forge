@@ -1,0 +1,79 @@
+{
+  "name": "rust-forge",
+  "version": "1.0.0",
+  "description": "Rust Forge — autonomous multi-server Rust manager for Windows",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "check": "node tests/smoke.js",
+    "dist": "electron-builder --win",
+    "dist:portable": "electron-builder --win portable",
+    "dist:installer": "electron-builder --win nsis",
+    "dist:setup": "electron-builder --win nsis",
+    "release": "electron-builder --win portable nsis --publish always",
+    "configure:repo": "node scripts/configure-release.js",
+    "site:prepare": "node scripts/configure-release.js --site-only"
+  },
+  "author": "Nekorakineko",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "44.3.0",
+    "electron-builder": "26.17.0"
+  },
+  "build": {
+    "appId": "com.rustforge.app",
+    "productName": "Rust Forge",
+    "asar": true,
+    "compression": "maximum",
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json",
+      "README.md",
+      "LICENSE",
+      "CHANGELOG.md"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "assets/rust-forge.ico",
+      "artifactName": "Rust-Forge-${version}-${channel}-${arch}.${ext}"
+    },
+    "portable": {
+      "artifactName": "Rust-Forge-${version}-portable-${arch}.exe"
+    },
+    "nsis": {
+      "artifactName": "Rust-Forge-${version}-Setup-${arch}.exe",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Rust Forge",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true,
+      "displayLanguageSelector": false
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "releaseType": "release"
+      }
+    ]
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "ws": "^8.18.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LordShadowArc/Rust-Forge.git"
+  }
+}

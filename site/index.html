@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="Rust Forge — free, open-source autonomous Rust dedicated server manager for Windows.">
+  <title>Rust Forge — Autonomous Rust Server Studio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./rust-forge-favicon-32.png?v=1.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="./rust-forge-favicon-16.png?v=1.0.0">
+  <link rel="icon" type="image/x-icon" href="./rust-forge.ico?v=1.0.0" sizes="any">
+  <link rel="shortcut icon" href="./rust-forge-favicon-32.png?v=1.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=1.0.0">
+  <meta name="theme-color" content="#08090b">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="nav">
+    <a class="brand" href="./">
+      <img src="./rust-forge.png" alt="Rust Forge">
+      <div><strong>RUST FORGE</strong><span>AUTONOMOUS SERVER STUDIO</span></div>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#opensource">Open Source</a>
+      <a id="githubTop" href="#" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">FREE · OPEN SOURCE · WINDOWS</span>
+        <h1>Run your Rust servers like a real product.</h1>
+        <p>Rust Forge is a polished, autonomous multi-server manager for Rust Dedicated. One interface for installs, updates, uMod plugins, RCON, backups, wipes, telemetry, diagnostics and Playit networking.</p>
+        <div class="hero-actions">
+          <a class="btn primary" id="downloadSetup" href="#">Download Setup</a>
+          <a class="btn" id="downloadPortable" href="#">Portable EXE</a>
+          <a class="btn ghost" id="openGithub" href="#" target="_blank" rel="noreferrer">View Source</a>
+        </div>
+        <div class="release-row"><span id="releaseBadge">Checking latest release…</span><span id="releaseDate"></span></div>
+      </div>
+      <div class="hero-card">
+        <img src="./rust-forge.png" alt="Rust Forge">
+        <div class="mini-status"><span class="dot"></span><span>ENGINE READY</span></div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-head"><span class="eyebrow">CORE</span><h2>Everything in one control plane.</h2></div>
+      <div class="feature-grid">
+        <article><b>Multi-server fabric</b><p>Independent identities, ports, saves, logs, plugins, schedules and profiles.</p></article>
+        <article><b>uMod automation</b><p>Autonomous Windows Oxide preparation, validation and per-server plugin management.</p></article>
+        <article><b>Runtime Health</b><p>Diagnostics for SteamCMD, Rust, Steamworks, ports, RCON, EAC signals and runtime files.</p></article>
+        <article><b>Safe automation</b><p>Backups, scheduled wipes, controlled updates and process-safe lifecycle operations.</p></article>
+        <article><b>Public server branding</b><p>Hostname, description, website, images and server browser metadata from the UI.</p></article>
+        <article><b>Playit-ready networking</b><p>Loopback-safe game exposure with optional query tunneling and private RCON.</p></article>
+      </div>
+    </section>
+
+    <section id="downloads" class="section dark-panel">
+      <div class="section-head"><span class="eyebrow">LATEST RELEASE</span><h2>Grab the current Windows build.</h2></div>
+      <div class="download-grid">
+        <div class="download-card"><span class="label">INSTALLER</span><h3>Setup.exe</h3><p>Standard Windows installer. Best for normal installs and future update flows.</p><a id="setupCard" class="btn primary" href="#">Download Setup</a></div>
+        <div class="download-card"><span class="label">PORTABLE</span><h3>Portable.exe</h3><p>Run Rust Forge without installing it into Windows.</p><a id="portableCard" class="btn" href="#">Download Portable</a></div>
+        <div class="download-card"><span class="label">RELEASES</span><h3>Changelog & assets</h3><p>Open the GitHub release page for notes, source and every published artifact.</p><a id="releasesCard" class="btn" href="#" target="_blank" rel="noreferrer">Open Releases</a></div>
+      </div>
+    </section>
+
+    <section id="opensource" class="section">
+      <div class="section-head"><span class="eyebrow">OPEN SOURCE</span><h2>No paid server-manager tier.</h2></div>
+      <div class="open-grid">
+        <div><h3>MIT licensed</h3><p>Rust Forge is published as source code so the community can inspect, fork and improve it.</p><a id="sourceLink" class="text-link" href="#" target="_blank" rel="noreferrer">Browse the repository →</a></div>
+        <div><h3>Free release delivery</h3><p>GitHub Releases hosts the setup and portable Windows artifacts. GitHub Pages hosts this project site.</p><a id="pagesLink" class="text-link" href="#" target="_blank" rel="noreferrer">Open project website →</a></div>
+        <div><h3>Automatic release pipeline</h3><p>Tag a new version, let GitHub Actions build the Windows artifacts and publish the release metadata for update checks.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© Rust Forge</span><span>Free · Open Source · Windows</span></footer>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

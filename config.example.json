@@ -1,0 +1,17 @@
+{
+  "note": "Runtime configuration is stored automatically in Electron userData. This file documents supported server profile properties.",
+  "server": {
+    "name": "My Rust Server",
+    "identity": "my-server",
+    "hostname": "My Rust Server",
+    "description": "Managed by Rust Forge",
+    "map": "Procedural Map",
+    "seed": 1337,
+    "worldsize": 3000,
+    "maxplayers": 10,
+    "ports": { "server": 28015, "query": 28016, "rcon": 28017 },
+    "uMod": true,
+    "autoRestart": false,
+    "autoUpdate": true
+  }
+}

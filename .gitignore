@@ -1,0 +1,8 @@
+node_modules/
+release/
+server_data/
+*.log
+.DS_Store
+.env
+.idea/
+.vscode/

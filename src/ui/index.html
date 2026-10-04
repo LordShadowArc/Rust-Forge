@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Rust Forge</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="titlebar">
+      <div class="brand-cluster drag"><div class="brand-mark brand-icon"><img src="../../assets/rust-forge.ico" alt="Rust Forge" draggable="false"></div><div><div class="brand-title">RUST FORGE</div><div class="brand-sub">AUTONOMOUS SERVER STUDIO</div></div></div>
+      <div class="title-status"><span class="status-dot"></span><span id="globalStatus">ENGINE READY</span></div>
+      <div class="window-actions no-drag"><button data-window="min" class="icon-btn">—</button><button data-window="close" class="icon-btn danger">×</button></div>
+    </header>
+    <div class="body">
+      <aside class="rail">
+        <button class="rail-item active" data-view="overview"><span>◈</span><small>Overview</small></button>
+        <button class="rail-item" data-view="servers"><span>▦</span><small>Servers</small></button>
+        <button class="rail-item" data-view="plugins"><span>✦</span><small>Plugins</small></button>
+        <button class="rail-item" data-view="control"><span>⌁</span><small>Control</small></button>
+        <button class="rail-item" data-view="diagnostics"><span>◉</span><small>Health</small></button>
+        <button class="rail-item" data-view="settings"><span>◒</span><small>Settings</small></button>
+        <button class="rail-item" data-view="about"><span>◆</span><small>About</small></button>
+        <div class="rail-spacer"></div>
+        <button class="rail-item" data-action="open-data"><span>⌂</span><small>Data</small></button>
+      </aside>
+      <main class="workspace">
+        <section id="view-overview" class="view active"></section>
+        <section id="view-servers" class="view"></section>
+        <section id="view-plugins" class="view"></section>
+        <section id="view-control" class="view"></section>
+        <section id="view-diagnostics" class="view"></section>
+        <section id="view-settings" class="view"></section>
+        <section id="view-about" class="view"></section>
+      </main>
+    </div>
+  </div>
+  <div id="toastStack" class="toast-stack"></div><div id="modalHost" aria-hidden="true"></div>
+  <script src="./renderer.js"></script>
+</body>
+</html>
